@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koustab Chowdhury - Portfolio</title>
+    <title>Koustab Chowdhury - Portfolio & CV</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             background-color: #0b192c;
-            color: #f5f5f5;
+            color: #2b2b2b;
             font-family: 'Georgia', serif;
-            margin: 0;
-            padding: 20px;
             display: flex;
             justify-content: center;
         }
-        .portfolio-container {
-            max-width: 480px;
+        .page-wrapper {
+            max-width: 500px;
             width: 100%;
-            padding: 20px;
-            background-color: #1e3e62;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+        /* Top Dark Hero Section */
+        .hero-section {
+            background-color: #0b192c;
+            color: #f5f5f5;
+            padding: 30px 25px;
+        }
+        .photo-box {
+            width: 130px;
+            height: 160px;
+            border: 2px solid #90e0ef;
+            border-radius: 6px;
+            object-fit: cover;
+            margin-bottom: 20px;
         }
         .meta-text {
             font-family: sans-serif;
@@ -34,30 +47,21 @@
             font-family: sans-serif;
             font-size: 0.9rem;
             color: #90e0ef;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
-        h1 {
+        .hero-section h1 {
             font-size: 2.5rem;
             line-height: 1.1;
-            margin: 0 0 20px 0;
+            margin-bottom: 20px;
             color: #f5f5f5;
         }
-        p {
+        .hero-section p {
             line-height: 1.6;
             color: #e0fbfc;
             font-size: 0.95rem;
             margin-bottom: 25px;
         }
-        .section-title {
-            font-family: sans-serif;
-            font-size: 0.85rem;
-            color: #ffb703;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        .contact-box {
+        .contact-box-dark {
             border: 1px solid #90e0ef;
             padding: 12px 15px;
             margin-bottom: 10px;
@@ -68,40 +72,191 @@
             background: transparent;
             display: block;
             text-decoration: none;
-            transition: background 0.2s;
             text-align: center;
-        }
-        .contact-box:hover {
-            background-color: #90e0ef;
-            color: #0b192c;
         }
         .row-links {
             display: flex;
             gap: 10px;
         }
-        .row-links .contact-box {
+        .row-links .contact-box-dark {
             flex: 1;
+        }
+
+        /* Scrolling Cream Resume Body Section */
+        .resume-body {
+            background-color: #f4f1ea;
+            color: #2c2c2c;
+            padding: 35px 25px;
+        }
+        .section-heading {
+            font-size: 1.5rem;
+            color: #1e3e62;
+            border-bottom: 2px solid #1e3e62;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .section-heading:first-of-type {
+            margin-top: 0;
+        }
+        .resume-body p, .resume-body li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #333333;
+            margin-bottom: 12px;
+        }
+        .item-block {
+            margin-bottom: 20px;
+        }
+        .item-title {
+            font-weight: bold;
+            color: #111111;
+            font-size: 1rem;
+        }
+        .item-subtitle {
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            color: #555555;
+            margin-bottom: 5px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .badge {
+            background-color: #e2dcd0;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            color: #222222;
+        }
+        .footer-dark {
+            background-color: #0b192c;
+            color: #f5f5f5;
+            padding: 30px 25px;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 0.9rem;
+        }
+        .footer-dark p {
+            color: #90e0ef;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="portfolio-container">
-        <div class="meta-text">Finance Intern • Brainware University</div>
-        <div class="location">Konnagar, Hooghly, West Bengal[cite: 1]</div>
+    <div class="page-wrapper">
+        <!-- Top Hero Section -->
+        <div class="hero-section">
+            <img src="photo.jpg" alt="Koustab Chowdhury" class="photo-box">
+            <div class="meta-text">Finance Intern • Brainware University</div>
+            <div class="location">Konnagar, Hooghly, West Bengal[cite: 1]</div>
+            <h1>Koustab Chowdhury</h1>
+            <p>BBA (Honors) Finance student at Brainware University with knowledge of financial analysis, banking, investment, and market research[cite: 1].</p>
+            
+            <a href="mailto:koustubchowdhury@gmail.com" class="contact-box-dark">koustubchowdhury@gmail.com[cite: 1]</a>
+            <div class="row-links">
+                <a href="tel:+917439881180" class="contact-box-dark">+91 74398 81180[cite: 1]</a>
+                <a href="https://www.linkedin.com/in/koustab-chowdhury-519318413" target="_blank" class="contact-box-dark">LinkedIn[cite: 1]</a>
+            </div>
+        </div>
 
-        <h1>Koustab Chowdhury</h1>
+        <!-- Scrolling Resume Body Section -->
+        <div class="resume-body">
+            <div class="section-heading">Objective</div>
+            <p>BBA (Honors) Finance student at Brainware University with knowledge of financial analysis, banking, investment, and marketing fundamentals. Seeking an opportunity to apply analytical skills, market research knowledge, and understanding of marketing strategies while contributing to organizational growth and developing professional expertise in finance and marketing[cite: 1].</p>
 
-        <p>BBA (Honors) Finance student with knowledge of financial analysis, banking, investment, and market research, seeking to drive organizational growth[cite: 1].</p>
+            <div class="section-heading">Studies</div>
+            
+            <div class="item-block">
+                <div class="item-title">Brainware University</div>
+                <div class="item-subtitle">Pursuing BBA Honours (4-year course) | 2028</div>
+                <p>9.10 SGPA (4th Sem)[cite: 1]</p>
+            </div>
 
-        <div class="section-title">Get in Touch</div>
-        
-        <a href="mailto:koustubchowdhury@gmail.com" class="contact-box">koustubchowdhury@gmail.com[cite: 1]</a>
-        
-        <div class="row-links">
-            <a href="tel:+917439881180" class="contact-box">+91 74398 81180[cite: 1]</a>
-            <a href="https://www.linkedin.com/in/koustab-chowdhury-519318413" target="_blank" class="contact-box">LinkedIn Profile[cite: 1]</a>
+            <div class="item-block">
+                <div class="item-title">Nabagram Vidhyapith</div>
+                <div class="item-subtitle">Higher Secondary (Class XII) | 2024</div>
+                <p>West Bengal Council of Higher Secondary Education (WBCHSE) — 81.9%[cite: 1]</p>
+            </div>
+
+            <div class="item-block">
+                <div class="item-title">Ramkrishna Vivekananda Mission</div>
+                <div class="item-subtitle">Secondary (Class X) | 2022</div>
+                <p>West Bengal Board of Secondary Education (WBBSE) — 74%[cite: 1]</p>
+            </div>
+
+            <div class="section-heading">Favourite Domain Subjects</div>
+            <div class="badge-list">
+                <span class="badge">Financial Management[cite: 1]</span>
+                <span class="badge">Financial Accounting[cite: 1]</span>
+                <span class="badge">Investment Analysis[cite: 1]</span>
+                <span class="badge">Financial Statement Analysis[cite: 1]</span>
+                <span class="badge">Cost & Management Accounting[cite: 1]</span>
+                <span class="badge">Corporate Finance[cite: 1]</span>
+            </div>
+
+            <div class="section-heading">Additional Skills</div>
+            <div class="badge-list">
+                <span class="badge">Financial Analysis[cite: 1]</span>
+                <span class="badge">Ratio Analysis[cite: 1]</span>
+                <span class="badge">MS Excel[cite: 1]</span>
+                <span class="badge">Power BI[cite: 1]</span>
+                <span class="badge">Financial Modelling (Basic)[cite: 1]</span>
+                <span class="badge">Analytical Thinking[cite: 1]</span>
+                <span class="badge">Problem Solving[cite: 1]</span>
+                <span class="badge">Team Collaboration[cite: 1]</span>
+            </div>
+
+            <div class="section-heading">Projects</div>
+            <div class="item-block">
+                <div class="item-title">Fundamental Analysis of Selected Stocks from the NIFTY Steel Index (FY 2023–26)[cite: 1]</div>
+                <ul>
+                    <li>Analysed financial and insurance-specific indicators including profitability, growth, claim settlement, solvency, persistency and expense ratios[cite: 1].</li>
+                    <li>Conducted a comparative fundamental analysis of Tata Steel, JSW Steel, Jindal Steel & Power, and SAIL using financial statements and key performance indicators[cite: 1].</li>
+                    <li>Evaluated profitability, liquidity, solvency, efficiency, and valuation metrics to compare financial strength and identify the strongest investment opportunity[cite: 1].</li>
+                </ul>
+            </div>
+
+            <div class="section-heading">Industrial Training / Internships</div>
+            <div class="item-block">
+                <div class="item-title">Agile Capital Service — Finance Intern[cite: 1]</div>
+                <div class="item-subtitle">10 June 2026 – 10 August 2026[cite: 1]</div>
+                <ul>
+                    <li>Conducted finance-focused research and prepared analytical reports on financial analysis, banking, insurance, taxation, and investment[cite: 1].</li>
+                    <li>Applied financial analysis techniques to evaluate companies, financial statements, and investment products[cite: 1].</li>
+                    <li>Developed well-structured project reports and effectively presented insights and recommendations based on internship assignments[cite: 1].</li>
+                    <li>Strengthened analytical, research, and financial reporting skills through practical finance projects[cite: 1].</li>
+                </ul>
+            </div>
+
+            <div class="section-heading">Certificates and Online Tests</div>
+            <ul>
+                <li>Power BI Data Modelling Basics Tutorial Course from MICROSOFT [June ’26][cite: 1]</li>
+                <li>The Business Analysis & Process Management project on COURSERA [June ’26][cite: 1]</li>
+                <li>The AU Project Finance Virtual Learning Program from FORAGE [Aug '26][cite: 1]</li>
+                <li>The Commercial Banking Job Simulation from FORAGE [Aug ’26][cite: 1]</li>
+                <li>Finding Funding from HP LIFE FOUNDATION [Aug ’26][cite: 1]</li>
+            </ul>
+
+            <div class="section-heading">Extracurricular Activities</div>
+            <p>Participated as an active team member in the College Football Tournament[cite: 1].</p>
+
+            <div class="section-heading">Hobbies & Interests</div>
+            <p>Playing Football, Exploring Places, Watching Movies[cite: 1].</p>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer-dark">
+            <p>Koustab Chowdhury[cite: 1]</p>
+            <p>Date: 15/09/2026[cite: 1]</p>
         </div>
     </div>
 </body>
 </html>
-
