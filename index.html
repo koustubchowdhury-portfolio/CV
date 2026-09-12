@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koustab Chowdhury - Portfolio & CV</title>
+    <title>Koustab Chowdhury - Portfolio</title>
     <style>
         * {
             box-sizing: border-box;
@@ -21,11 +21,33 @@
             max-width: 500px;
             width: 100%;
         }
+        /* Nav Bar */
+        .nav-bar {
+            background-color: #0b192c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        .logo-box {
+            border: 1px solid #90e0ef;
+            color: #f5f5f5;
+            padding: 6px 12px;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border-radius: 4px;
+        }
+        .menu-icon {
+            color: #f5f5f5;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
         /* Top Dark Hero Section */
         .hero-section {
             background-color: #0b192c;
             color: #f5f5f5;
-            padding: 30px 25px;
+            padding: 20px 25px 40px 25px;
         }
         .photo-box {
             width: 130px;
@@ -61,7 +83,7 @@
             font-size: 0.95rem;
             margin-bottom: 25px;
         }
-        .contact-box-dark {
+        .contact-btn {
             border: 1px solid #90e0ef;
             padding: 12px 15px;
             margin-bottom: 10px;
@@ -78,7 +100,7 @@
             display: flex;
             gap: 10px;
         }
-        .row-links .contact-box-dark {
+        .row-links .contact-btn {
             flex: 1;
         }
 
@@ -86,15 +108,15 @@
         .resume-body {
             background-color: #f4f1ea;
             color: #2c2c2c;
-            padding: 35px 25px;
+            padding: 40px 25px;
         }
         .section-heading {
-            font-size: 1.5rem;
-            color: #1e3e62;
-            border-bottom: 2px solid #1e3e62;
+            font-size: 1.6rem;
+            color: #111111;
+            border-bottom: 2px solid #111111;
             padding-bottom: 5px;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            margin-top: 35px;
+            margin-bottom: 20px;
         }
         .section-heading:first-of-type {
             margin-top: 0;
@@ -107,17 +129,24 @@
         }
         .item-block {
             margin-bottom: 20px;
+            border-bottom: 1px solid #dcd6cb;
+            padding-bottom: 15px;
         }
-        .item-title {
-            font-weight: bold;
-            color: #111111;
-            font-size: 1rem;
+        .item-block:last-child {
+            border-bottom: none;
         }
-        .item-subtitle {
+        .item-label {
             font-family: sans-serif;
-            font-size: 0.85rem;
-            color: #555555;
-            margin-bottom: 5px;
+            font-size: 0.8rem;
+            color: #666666;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+        .item-value {
+            font-size: 1rem;
+            color: #111111;
+            font-weight: bold;
+            margin-bottom: 8px;
         }
         ul {
             padding-left: 20px;
@@ -129,133 +158,230 @@
             margin-top: 8px;
         }
         .badge {
-            background-color: #e2dcd0;
+            background-color: #e5dfd3;
+            border: 1px solid #d4ccc0;
             padding: 6px 12px;
             border-radius: 4px;
             font-family: sans-serif;
             font-size: 0.85rem;
             color: #222222;
         }
+        .cert-card {
+            background-color: #fbf9f5;
+            border: 1px solid #dcd6cb;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 4px;
+        }
+        .cert-title {
+            font-weight: bold;
+            font-size: 0.95rem;
+            color: #111111;
+            margin-bottom: 4px;
+        }
+        .cert-sub {
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            color: #555555;
+        }
+        .numbered-list-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #dcd6cb;
+            font-size: 0.95rem;
+            color: #222222;
+        }
+        .numbered-list-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Bottom Dark Get in Touch Section */
         .footer-dark {
             background-color: #0b192c;
             color: #f5f5f5;
-            padding: 30px 25px;
-            text-align: center;
-            font-family: sans-serif;
-            font-size: 0.9rem;
+            padding: 40px 25px;
+        }
+        .footer-dark h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #f5f5f5;
         }
         .footer-dark p {
-            color: #90e0ef;
-            margin-bottom: 10px;
+            color: #e0fbfc;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+        .signature-box {
+            background-color: #f5f5f5;
+            color: #111111;
+            padding: 12px 20px;
+            display: inline-block;
+            font-family: 'Brush Script MT', cursive, serif;
+            font-size: 1.5rem;
+            border-radius: 4px;
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
     <div class="page-wrapper">
+        <!-- Nav Bar -->
+        <div class="nav-bar">
+            <div class="logo-box">KC</div>
+            <div class="menu-icon">☰</div>
+        </div>
+
         <!-- Top Hero Section -->
         <div class="hero-section">
             <img src="photo.jpg" alt="Koustab Chowdhury" class="photo-box">
-            <div class="meta-text">Finance Intern • Brainware University</div>
-            <div class="location">Konnagar, Hooghly, West Bengal[cite: 1]</div>
+            <div class="meta-text">Finance Intern, Agile Capital Service - 2026</div>
+            <div class="location">Konnagar, Hooghly, West Bengal</div>
             <h1>Koustab Chowdhury</h1>
-            <p>BBA (Honors) Finance student at Brainware University with knowledge of financial analysis, banking, investment, and market research[cite: 1].</p>
+            <p>BBA (Honours) Finance student at Brainware University, reading company statements, mutual fund returns, and stock ratios the way most people read the news.</p>
             
-            <a href="mailto:koustubchowdhury@gmail.com" class="contact-box-dark">koustubchowdhury@gmail.com[cite: 1]</a>
+            <a href="mailto:koustubchowdhury@gmail.com" class="contact-btn">koustubchowdhury@gmail.com</a>
             <div class="row-links">
-                <a href="tel:+917439881180" class="contact-box-dark">+91 74398 81180[cite: 1]</a>
-                <a href="https://www.linkedin.com/in/koustab-chowdhury-519318413" target="_blank" class="contact-box-dark">LinkedIn[cite: 1]</a>
+                <a href="tel:+917439881180" class="contact-btn">+91 74398 81180</a>
+                <a href="https://www.linkedin.com/in/koustab-chowdhury-519318413" target="_blank" class="contact-btn">LinkedIn</a>
             </div>
         </div>
 
-        <!-- Scrolling Resume Body Section -->
+        <!-- Scrolling Cream Resume Body Section -->
         <div class="resume-body">
             <div class="section-heading">Objective</div>
-            <p>BBA (Honors) Finance student at Brainware University with knowledge of financial analysis, banking, investment, and marketing fundamentals. Seeking an opportunity to apply analytical skills, market research knowledge, and understanding of marketing strategies while contributing to organizational growth and developing professional expertise in finance and marketing[cite: 1].</p>
+            <p>Looking for a role in financial analysis, banking, and investments where academic grounding in ratios and markets can turn into practical, day-to-day work — and where organizational growth and personal growth move in the same direction.</p>
 
-            <div class="section-heading">Studies</div>
+            <div class="section-heading">Education</div>
             
             <div class="item-block">
-                <div class="item-title">Brainware University</div>
-                <div class="item-subtitle">Pursuing BBA Honours (4-year course) | 2028</div>
-                <p>9.10 SGPA (4th Sem)[cite: 1]</p>
+                <div class="item-label">Institution</div>
+                <div class="item-value">Brainware University</div>
+                <div class="item-label">Degree</div>
+                <p>BBA Honours (4-year course) — in progress</p>
+                <div class="item-label">Year</div>
+                <p>2028</p>
+                <div class="item-label">Marks</div>
+                <p>9.10 SGPA (4th Sem)</p>
             </div>
 
             <div class="item-block">
-                <div class="item-title">Nabagram Vidhyapith</div>
-                <div class="item-subtitle">Higher Secondary (Class XII) | 2024</div>
-                <p>West Bengal Council of Higher Secondary Education (WBCHSE) — 81.9%[cite: 1]</p>
+                <div class="item-label">Institution</div>
+                <div class="item-value">Nabagram Vidhyapith</div>
+                <div class="item-label">Degree</div>
+                <p>Higher Secondary (Class XII)</p>
+                <div class="item-label">Board</div>
+                <p>WBCHSE</p>
+                <div class="item-label">Year</div>
+                <p>2024</p>
+                <div class="item-label">Marks</div>
+                <p>81.9%</p>
             </div>
 
             <div class="item-block">
-                <div class="item-title">Ramkrishna Vivekananda Mission</div>
-                <div class="item-subtitle">Secondary (Class X) | 2022</div>
-                <p>West Bengal Board of Secondary Education (WBBSE) — 74%[cite: 1]</p>
+                <div class="item-label">Institution</div>
+                <div class="item-value">Ramkrishna Vivekananda Mission</div>
+                <div class="item-label">Degree</div>
+                <p>Secondary (Class X)</p>
+                <div class="item-label">Board</div>
+                <p>WBBSE</p>
+                <div class="item-label">Year</div>
+                <p>2022</p>
+                <div class="item-label">Marks</div>
+                <p>74%</p>
             </div>
 
-            <div class="section-heading">Favourite Domain Subjects</div>
-            <div class="badge-list">
-                <span class="badge">Financial Management[cite: 1]</span>
-                <span class="badge">Financial Accounting[cite: 1]</span>
-                <span class="badge">Investment Analysis[cite: 1]</span>
-                <span class="badge">Financial Statement Analysis[cite: 1]</span>
-                <span class="badge">Cost & Management Accounting[cite: 1]</span>
-                <span class="badge">Corporate Finance[cite: 1]</span>
+            <div class="section-heading">Areas of focus</div>
+            <div class="item-label">Favourite domain subjects</div>
+            <div class="badge-list" style="margin-bottom: 25px;">
+                <span class="badge">Financial Management</span>
+                <span class="badge">Financial Accounting</span>
+                <span class="badge">Investment Analysis</span>
+                <span class="badge">Financial Markets</span>
+                <span class="badge">Cost & Management Accounting</span>
             </div>
 
-            <div class="section-heading">Additional Skills</div>
+            <div class="item-label">Additional skills</div>
             <div class="badge-list">
-                <span class="badge">Financial Analysis[cite: 1]</span>
-                <span class="badge">Ratio Analysis[cite: 1]</span>
-                <span class="badge">MS Excel[cite: 1]</span>
-                <span class="badge">Power BI[cite: 1]</span>
-                <span class="badge">Financial Modelling (Basic)[cite: 1]</span>
-                <span class="badge">Analytical Thinking[cite: 1]</span>
-                <span class="badge">Problem Solving[cite: 1]</span>
-                <span class="badge">Team Collaboration[cite: 1]</span>
+                <span class="badge">Depreciation & Asset Valuation</span>
+                <span class="badge">Debt-Equity Ratio Interpretation</span>
+                <span class="badge">Analytical Thinking</span>
+                <span class="badge">Teamwork</span>
+                <span class="badge">Communication</span>
             </div>
 
             <div class="section-heading">Projects</div>
+            
             <div class="item-block">
-                <div class="item-title">Fundamental Analysis of Selected Stocks from the NIFTY Steel Index (FY 2023–26)[cite: 1]</div>
-                <ul>
-                    <li>Analysed financial and insurance-specific indicators including profitability, growth, claim settlement, solvency, persistency and expense ratios[cite: 1].</li>
-                    <li>Conducted a comparative fundamental analysis of Tata Steel, JSW Steel, Jindal Steel & Power, and SAIL using financial statements and key performance indicators[cite: 1].</li>
-                    <li>Evaluated profitability, liquidity, solvency, efficiency, and valuation metrics to compare financial strength and identify the strongest investment opportunity[cite: 1].</li>
+                <div class="item-value">Ratio Analysis — Comparative Study of LIC and HDFC Life</div>
+                <p>Set the two insurers side by side on profitability, growth, claim settlement, solvency, persistency, and expense ratios — the metrics that tell you how an insurance business is run, not just how it looks on the surface.</p>
+            </div>
+
+            <div class="item-block">
+                <div class="item-value">Mutual Fund Analysis</div>
+                <p>Compared seven mutual fund schemes on returns, CAGR, expense ratios, and performance indicators to work out which scheme actually earned its fees.</p>
+            </div>
+
+            <div class="item-block">
+                <div class="item-value">Fundamental Analysis of Nifty Auto Stocks, FY 2023–26</div>
+                <p>Studied M&M, Maruti Suzuki, Bajaj Auto, and Eicher Motors on growth, profitability, and financial strength — and made the case for Mahindra & Mahindra as the strongest investment candidate of the four.</p>
+            </div>
+
+            <div class="section-heading">Internship</div>
+            <div class="item-block">
+                <div class="item-value">Finance Intern — Agile Capital Service</div>
+                <div class="item-label" style="margin-top: 5px;">10 June 2026 – 10 August 2026</div>
+                <ul style="margin-top: 10px;">
+                    <li>Completed finance-focused research and project reports spanning financial analysis, banking, insurance, taxation, and investment topics.</li>
+                    <li>Applied analysis and interpretation techniques to real companies and financial products.</li>
+                    <li>Prepared structured reports and presented findings from the internship-based studies.</li>
                 </ul>
             </div>
 
-            <div class="section-heading">Industrial Training / Internships</div>
-            <div class="item-block">
-                <div class="item-title">Agile Capital Service — Finance Intern[cite: 1]</div>
-                <div class="item-subtitle">10 June 2026 – 10 August 2026[cite: 1]</div>
-                <ul>
-                    <li>Conducted finance-focused research and prepared analytical reports on financial analysis, banking, insurance, taxation, and investment[cite: 1].</li>
-                    <li>Applied financial analysis techniques to evaluate companies, financial statements, and investment products[cite: 1].</li>
-                    <li>Developed well-structured project reports and effectively presented insights and recommendations based on internship assignments[cite: 1].</li>
-                    <li>Strengthened analytical, research, and financial reporting skills through practical finance projects[cite: 1].</li>
-                </ul>
+            <div class="section-heading">Certifications & simulations</div>
+            
+            <div class="cert-card">
+                <div class="cert-title">SEBI Investor Awareness Test</div>
+                <div class="cert-sub">NISM — National Institute of Securities Markets • September 2026</div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-title">Sustainability in Banking</div>
+                <div class="cert-sub">Job Simulation — Forage / ACCA • August 2026</div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-title">Technology Risk</div>
+                <div class="cert-sub">Virtual Job Simulation — Forage / EY • August 2026</div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-title">Critical Thinking in the AI Era</div>
+                <div class="cert-sub">HP LIFE • August 2026</div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-title">Key Roles and Business Segments</div>
+                <div class="cert-sub">Job Simulation — Forage / PNC • August 2026</div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-title">Property Tax Consulting</div>
+                <div class="cert-sub">Job Simulation — Forage / Ryan • August 2026</div>
             </div>
 
-            <div class="section-heading">Certificates and Online Tests</div>
-            <ul>
-                <li>Power BI Data Modelling Basics Tutorial Course from MICROSOFT [June ’26][cite: 1]</li>
-                <li>The Business Analysis & Process Management project on COURSERA [June ’26][cite: 1]</li>
-                <li>The AU Project Finance Virtual Learning Program from FORAGE [Aug '26][cite: 1]</li>
-                <li>The Commercial Banking Job Simulation from FORAGE [Aug ’26][cite: 1]</li>
-                <li>Finding Funding from HP LIFE FOUNDATION [Aug ’26][cite: 1]</li>
-            </ul>
+            <div class="section-heading">Extracurricular</div>
+            <p>Active team member in the College Cricket Tournament — where reading the game is its own kind of analysis.</p>
 
-            <div class="section-heading">Extracurricular Activities</div>
-            <p>Participated as an active team member in the College Football Tournament[cite: 1].</p>
-
-            <div class="section-heading">Hobbies & Interests</div>
-            <p>Playing Football, Exploring Places, Watching Movies[cite: 1].</p>
+            <div class="section-heading">Outside the numbers</div>
+            <div class="numbered-list-item">Following financial markets</div>
+            <div class="numbered-list-item">Travelling and exploring new places</div>
+            <div class="numbered-list-item">Watching movies</div>
+            <div class="numbered-list-item">Spending time with friends</div>
         </div>
 
-        <!-- Footer Section -->
+        <!-- Bottom Dark Get in Touch Section -->
         <div class="footer-dark">
-            <p>Koustab Chowdhury[cite: 1]</p>
-            <p>Date: 15/09/2026[cite: 1]</p>
+            <h2>Get in touch</h2>
+            <p>Open to internships and entry-level roles in financial analysis, banking, and investments.</p>
+            <a href="mailto:koustubchowdhury@gmail.com" style="color: #90e0ef; display: block; margin-bottom: 10px; text-decoration: none;">koustubchowdhury@gmail.com</a>
+            <a href="tel:+917439881180" style="color: #90e0ef; display: block; margin-bottom: 10px; text-decoration: none;">+91 74398 81180</a>
+            <a href="https://www.linkedin.com/in/koustab-chowdhury-519318413" target="_blank" style="color: #90e0ef; display: block; margin-bottom: 20px; text-decoration: none;">linkedin.com/in/koustab-chowdhury</a>
+            <div class="signature-box">Koustab Chowdhury</div>
         </div>
     </div>
 </body>
